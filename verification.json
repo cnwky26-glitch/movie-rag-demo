@@ -1,0 +1,26 @@
+{
+  "date_local": "2026-11-13",
+  "original_files_unchanged": 13,
+  "python_files_syntax_valid": 7,
+  "streamlit_baseline_app_test": "passed",
+  "checks_executed": [
+    "exact_title_preserved",
+    "unrelated_query_empty",
+    "whitespace_warning",
+    "missing_api_config_error",
+    "genre_filter",
+    "valid_generation_selection",
+    "reject_unknown_movie",
+    "reject_invalid_fact",
+    "reject_extra_free_text"
+  ],
+  "embedding_model_comparison": "completed_by_user_results_read_and_reviewed",
+  "neo4j_integration": "passed_cloud_import_repeat_import_and_related_movie_query",
+  "deepseek_api": "user_confirmed_success_via_ui_screenshot_movie_and_actor_facts",
+  "github_pushed": false,
+  "semantic_ui": "user_confirmed_plot_query_returns_correct_movie",
+  "neo4j_graph_button_ui": "user_confirmed_success_after_restart",
+  "native_certificate_validation": "passed_with_truststore_at_application_entrypoints",
+  "last_updated_local": "2026-11-14",
+  "deepseek_raw_response_and_usage": "not_recorded_no_additional_api_call"
+}

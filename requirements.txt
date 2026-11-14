@@ -1,0 +1,4 @@
+numpy==2.5.4
+streamlit==1.57.0
+python-dotenv==1.2.2
+truststore==0.10.4

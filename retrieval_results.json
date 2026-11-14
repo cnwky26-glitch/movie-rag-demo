@@ -1,0 +1,2419 @@
+{
+  "generated_at_utc": "2026-11-13T12:47:30.914750+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 204 Stepping 3, GenuineIntel",
+  "movie_count": 7,
+  "query_count": 30,
+  "corpus_digest": "42293db4659525fadcbb8a8cba2b1d86afae3bb65d191061709efd4c1dd5e860",
+  "top_k": 5,
+  "semantic_acceptance_threshold": 0.45,
+  "limitations": [
+    "7 部电影、人工构造且未独立标注的查询，仅供小样本功能分析。",
+    "MRR 和 Recall 使用未按阈值截断的排序；明确片名优先。拒识率单独统计。",
+    "只测单次热加载查询耗时，不含模型和索引加载、数据库、网络及生成。",
+    "未用独立验证集校准相似度阈值；结果不能代表真实用户或线上业务收益。"
+  ],
+  "systems": [
+    {
+      "system": "标题／属性匹配",
+      "positive_queries": 25,
+      "negative_queries": 5,
+      "mrr@5": 0.72,
+      "recall@5": 0.76,
+      "negative_false_accept_rate": 0,
+      "positive_empty_result_rate": 0.24,
+      "latency_ms_median": 0.007599999662488699,
+      "cases": [
+        {
+          "id": "title-1",
+          "category": "title",
+          "query": "让子弹飞",
+          "relevant_ids": [
+            1
+          ],
+          "ranked_ids": [
+            1
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            1
+          ],
+          "latency_ms": 0.058900011936202645,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-2",
+          "category": "title",
+          "query": "邪不压正",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            2
+          ],
+          "latency_ms": 0.042899977415800095,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-3",
+          "category": "title",
+          "query": "流浪地球",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            3
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            3
+          ],
+          "latency_ms": 0.03860000288113952,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-4",
+          "category": "title",
+          "query": "战狼2",
+          "relevant_ids": [
+            4
+          ],
+          "ranked_ids": [
+            4
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            4
+          ],
+          "latency_ms": 0.01170000177808106,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-5",
+          "category": "title",
+          "query": "霸王别姬",
+          "relevant_ids": [
+            5
+          ],
+          "ranked_ids": [
+            5
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            5
+          ],
+          "latency_ms": 0.009399984264746308,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-6",
+          "category": "title",
+          "query": "阿飞正传",
+          "relevant_ids": [
+            6
+          ],
+          "ranked_ids": [
+            6
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            6
+          ],
+          "latency_ms": 0.007399998139590025,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-7",
+          "category": "title",
+          "query": "一代宗师",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            7
+          ],
+          "latency_ms": 0.007299997378140688,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-1",
+          "category": "person",
+          "query": "姜文导演的电影",
+          "relevant_ids": [
+            1,
+            2
+          ],
+          "ranked_ids": [
+            1,
+            2
+          ],
+          "scores": [
+            null,
+            null
+          ],
+          "accepted_ids": [
+            1,
+            2
+          ],
+          "latency_ms": 0.008899980457499623,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-2",
+          "category": "person",
+          "query": "张国荣主演的电影",
+          "relevant_ids": [
+            5,
+            6
+          ],
+          "ranked_ids": [
+            5,
+            6
+          ],
+          "scores": [
+            null,
+            null
+          ],
+          "accepted_ids": [
+            5,
+            6
+          ],
+          "latency_ms": 0.00799997360445559,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-3",
+          "category": "person",
+          "query": "王家卫导演的电影",
+          "relevant_ids": [
+            6,
+            7
+          ],
+          "ranked_ids": [
+            6,
+            7
+          ],
+          "scores": [
+            null,
+            null
+          ],
+          "accepted_ids": [
+            6,
+            7
+          ],
+          "latency_ms": 0.007599999662488699,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-4",
+          "category": "person",
+          "query": "吴京主演的电影",
+          "relevant_ids": [
+            3,
+            4
+          ],
+          "ranked_ids": [
+            3,
+            4
+          ],
+          "scores": [
+            null,
+            null
+          ],
+          "accepted_ids": [
+            3,
+            4
+          ],
+          "latency_ms": 0.007599999662488699,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-5",
+          "category": "person",
+          "query": "彭于晏主演的电影",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            2
+          ],
+          "latency_ms": 0.007299997378140688,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-6",
+          "category": "person",
+          "query": "梁朝伟主演的电影",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            7
+          ],
+          "latency_ms": 0.14849999570287764,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "genre-1",
+          "category": "genre",
+          "query": "我想看科幻片",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            3
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            3
+          ],
+          "latency_ms": 0.015500001609325409,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "genre-2",
+          "category": "genre",
+          "query": "推荐动作电影",
+          "relevant_ids": [
+            2,
+            4,
+            7
+          ],
+          "ranked_ids": [
+            2,
+            4,
+            7
+          ],
+          "scores": [
+            null,
+            null,
+            null
+          ],
+          "accepted_ids": [
+            2,
+            4,
+            7
+          ],
+          "latency_ms": 0.0109999964479357,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "genre-3",
+          "category": "genre",
+          "query": "推荐剧情电影",
+          "relevant_ids": [
+            1,
+            5,
+            6
+          ],
+          "ranked_ids": [
+            1,
+            5,
+            6
+          ],
+          "scores": [
+            null,
+            null,
+            null
+          ],
+          "accepted_ids": [
+            1,
+            5,
+            6
+          ],
+          "latency_ms": 0.008800008799880743,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-1",
+          "category": "plot",
+          "query": "带着地球逃离即将毁灭的太阳",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.007800001185387373,
+          "reciprocal_rank": 0.0,
+          "recall": 0.0
+        },
+        {
+          "id": "plot-2",
+          "category": "plot",
+          "query": "回到北平寻找师门血案的凶手",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.007100024959072471,
+          "reciprocal_rank": 0.0,
+          "recall": 0.0
+        },
+        {
+          "id": "plot-3",
+          "category": "plot",
+          "query": "土匪当上县长后和地方恶霸斗争",
+          "relevant_ids": [
+            1
+          ],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.007199996616691351,
+          "reciprocal_rank": 0.0,
+          "recall": 0.0
+        },
+        {
+          "id": "plot-4",
+          "category": "plot",
+          "query": "在非洲战乱中营救同胞",
+          "relevant_ids": [
+            4
+          ],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.007199996616691351,
+          "reciprocal_rank": 0.0,
+          "recall": 0.0
+        },
+        {
+          "id": "plot-5",
+          "category": "plot",
+          "query": "京剧演员跨越半个世纪的悲欢离合",
+          "relevant_ids": [
+            5
+          ],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.007399998139590025,
+          "reciprocal_rank": 0.0,
+          "recall": 0.0
+        },
+        {
+          "id": "plot-6",
+          "category": "plot",
+          "query": "一个叫旭仔的年轻人寻找生母",
+          "relevant_ids": [
+            6
+          ],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.006699992809444666,
+          "reciprocal_rank": 0.0,
+          "recall": 0.0
+        },
+        {
+          "id": "plot-7",
+          "category": "plot",
+          "query": "叶问在乱世中的武林传奇",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7
+          ],
+          "scores": [
+            null
+          ],
+          "accepted_ids": [
+            7
+          ],
+          "latency_ms": 0.007499998901039362,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "compound-1",
+          "category": "compound",
+          "query": "姜文导演的动作片",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "scores": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "accepted_ids": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "latency_ms": 0.008899980457499623,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "compound-2",
+          "category": "compound",
+          "query": "张国荣主演的剧情片",
+          "relevant_ids": [
+            5,
+            6
+          ],
+          "ranked_ids": [
+            1,
+            5,
+            6
+          ],
+          "scores": [
+            null,
+            null,
+            null
+          ],
+          "accepted_ids": [
+            1,
+            5,
+            6
+          ],
+          "latency_ms": 0.009499985026195645,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "negative-1",
+          "category": "out_of_catalog",
+          "query": "今天北京天气怎么样",
+          "relevant_ids": [],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.007100024959072471,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-2",
+          "category": "out_of_catalog",
+          "query": "教我做番茄炒蛋",
+          "relevant_ids": [],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.006799993570894003,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-3",
+          "category": "out_of_catalog",
+          "query": "恐龙主题的电影",
+          "relevant_ids": [],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.006399990525096655,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-4",
+          "category": "out_of_catalog",
+          "query": "魔法学校里的少年巫师",
+          "relevant_ids": [],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.006999995093792677,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-5",
+          "category": "out_of_catalog",
+          "query": "一部爱情喜剧片",
+          "relevant_ids": [],
+          "ranked_ids": [],
+          "scores": [],
+          "accepted_ids": [],
+          "latency_ms": 0.007199996616691351,
+          "reciprocal_rank": null,
+          "recall": null
+        }
+      ]
+    },
+    {
+      "system": "sentence-transformers/all-MiniLM-L6-v2",
+      "positive_queries": 25,
+      "negative_queries": 5,
+      "mrr@5": 0.84,
+      "recall@5": 0.9733333333333334,
+      "negative_false_accept_rate": 1,
+      "positive_empty_result_rate": 0.08,
+      "latency_ms_median": 7.949749997351319,
+      "cases": [
+        {
+          "id": "title-1",
+          "category": "title",
+          "query": "让子弹飞",
+          "relevant_ids": [
+            1
+          ],
+          "ranked_ids": [
+            1,
+            6,
+            2,
+            4,
+            7
+          ],
+          "scores": [
+            0.6591556072235107,
+            0.45651987195014954,
+            0.4493440091609955,
+            0.42216843366622925,
+            0.4079905152320862
+          ],
+          "accepted_ids": [
+            1,
+            6
+          ],
+          "latency_ms": 8.518599992385134,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-2",
+          "category": "title",
+          "query": "邪不压正",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2,
+            6,
+            4,
+            5,
+            7
+          ],
+          "scores": [
+            0.6099968552589417,
+            0.4986230134963989,
+            0.4148659408092499,
+            0.40785640478134155,
+            0.3866424858570099
+          ],
+          "accepted_ids": [
+            2,
+            6
+          ],
+          "latency_ms": 7.773099991027266,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-3",
+          "category": "title",
+          "query": "流浪地球",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            3,
+            2,
+            4,
+            5,
+            6
+          ],
+          "scores": [
+            0.620254397392273,
+            0.5035417079925537,
+            0.46026286482810974,
+            0.43995651602745056,
+            0.4398077428340912
+          ],
+          "accepted_ids": [
+            3,
+            2,
+            4
+          ],
+          "latency_ms": 7.799799990607426,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-4",
+          "category": "title",
+          "query": "战狼2",
+          "relevant_ids": [
+            4
+          ],
+          "ranked_ids": [
+            4,
+            2,
+            6,
+            1,
+            3
+          ],
+          "scores": [
+            0.4663948118686676,
+            0.374988853931427,
+            0.3617071509361267,
+            0.35273733735084534,
+            0.33907580375671387
+          ],
+          "accepted_ids": [
+            4
+          ],
+          "latency_ms": 9.35340000432916,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-5",
+          "category": "title",
+          "query": "霸王别姬",
+          "relevant_ids": [
+            5
+          ],
+          "ranked_ids": [
+            5,
+            6,
+            2,
+            7,
+            1
+          ],
+          "scores": [
+            0.5964438915252686,
+            0.6581109762191772,
+            0.6204953193664551,
+            0.6005537509918213,
+            0.506759524345398
+          ],
+          "accepted_ids": [
+            5,
+            6,
+            2,
+            7,
+            1
+          ],
+          "latency_ms": 8.107000001473352,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-6",
+          "category": "title",
+          "query": "阿飞正传",
+          "relevant_ids": [
+            6
+          ],
+          "ranked_ids": [
+            6,
+            2,
+            5,
+            4,
+            7
+          ],
+          "scores": [
+            0.6932603716850281,
+            0.5241289138793945,
+            0.4359510838985443,
+            0.43457579612731934,
+            0.3939378261566162
+          ],
+          "accepted_ids": [
+            6,
+            2
+          ],
+          "latency_ms": 7.205700007034466,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-7",
+          "category": "title",
+          "query": "一代宗师",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7,
+            6,
+            2,
+            1,
+            4
+          ],
+          "scores": [
+            0.4905507266521454,
+            0.41382578015327454,
+            0.3779106140136719,
+            0.3746858239173889,
+            0.3574177622795105
+          ],
+          "accepted_ids": [
+            7
+          ],
+          "latency_ms": 8.238199981860816,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-1",
+          "category": "person",
+          "query": "姜文导演的电影",
+          "relevant_ids": [
+            1,
+            2
+          ],
+          "ranked_ids": [
+            2,
+            6,
+            5,
+            1,
+            4
+          ],
+          "scores": [
+            0.6314585208892822,
+            0.6041450500488281,
+            0.5801987051963806,
+            0.566409707069397,
+            0.5087008476257324
+          ],
+          "accepted_ids": [
+            2,
+            6,
+            5,
+            1,
+            4
+          ],
+          "latency_ms": 10.484700003871694,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-2",
+          "category": "person",
+          "query": "张国荣主演的电影",
+          "relevant_ids": [
+            5,
+            6
+          ],
+          "ranked_ids": [
+            5,
+            4,
+            2,
+            7,
+            6
+          ],
+          "scores": [
+            0.6653724312782288,
+            0.6370530724525452,
+            0.6354186534881592,
+            0.6301713585853577,
+            0.6133501529693604
+          ],
+          "accepted_ids": [
+            5,
+            4,
+            2,
+            7,
+            6
+          ],
+          "latency_ms": 9.101200004806742,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-3",
+          "category": "person",
+          "query": "王家卫导演的电影",
+          "relevant_ids": [
+            6,
+            7
+          ],
+          "ranked_ids": [
+            6,
+            5,
+            7,
+            2,
+            1
+          ],
+          "scores": [
+            0.7054555416107178,
+            0.6509839296340942,
+            0.6360983848571777,
+            0.6300642490386963,
+            0.5762065649032593
+          ],
+          "accepted_ids": [
+            6,
+            5,
+            7,
+            2,
+            1
+          ],
+          "latency_ms": 7.3991999961435795,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-4",
+          "category": "person",
+          "query": "吴京主演的电影",
+          "relevant_ids": [
+            3,
+            4
+          ],
+          "ranked_ids": [
+            4,
+            2,
+            5,
+            3,
+            6
+          ],
+          "scores": [
+            0.6884368658065796,
+            0.6771548986434937,
+            0.6750348210334778,
+            0.6532984972000122,
+            0.6042484045028687
+          ],
+          "accepted_ids": [
+            4,
+            2,
+            5,
+            3,
+            6
+          ],
+          "latency_ms": 8.611900004325435,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-5",
+          "category": "person",
+          "query": "彭于晏主演的电影",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            5,
+            2,
+            6,
+            4,
+            7
+          ],
+          "scores": [
+            0.6265074610710144,
+            0.5910677909851074,
+            0.5847331285476685,
+            0.5787321925163269,
+            0.5320097208023071
+          ],
+          "accepted_ids": [
+            5,
+            2,
+            6,
+            4,
+            7
+          ],
+          "latency_ms": 8.740399993257597,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "person-6",
+          "category": "person",
+          "query": "梁朝伟主演的电影",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7,
+            2,
+            6,
+            5,
+            1
+          ],
+          "scores": [
+            0.6272223591804504,
+            0.6028860211372375,
+            0.5922160148620605,
+            0.5817986726760864,
+            0.5391170978546143
+          ],
+          "accepted_ids": [
+            7,
+            2,
+            6,
+            5,
+            1
+          ],
+          "latency_ms": 9.57110000308603,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "genre-1",
+          "category": "genre",
+          "query": "我想看科幻片",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            6,
+            3,
+            5,
+            2,
+            4
+          ],
+          "scores": [
+            0.5237308740615845,
+            0.4084324240684509,
+            0.40211623907089233,
+            0.3896598219871521,
+            0.38152146339416504
+          ],
+          "accepted_ids": [
+            6
+          ],
+          "latency_ms": 11.10760000301525,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "genre-2",
+          "category": "genre",
+          "query": "推荐动作电影",
+          "relevant_ids": [
+            2,
+            4,
+            7
+          ],
+          "ranked_ids": [
+            5,
+            3,
+            4,
+            2,
+            6
+          ],
+          "scores": [
+            0.3523344397544861,
+            0.3481318950653076,
+            0.3439975678920746,
+            0.3426727056503296,
+            0.3339850902557373
+          ],
+          "accepted_ids": [],
+          "latency_ms": 8.90889999573119,
+          "reciprocal_rank": 0.3333333333333333,
+          "recall": 0.6666666666666666
+        },
+        {
+          "id": "genre-3",
+          "category": "genre",
+          "query": "推荐剧情电影",
+          "relevant_ids": [
+            1,
+            5,
+            6
+          ],
+          "ranked_ids": [
+            5,
+            3,
+            4,
+            2,
+            6
+          ],
+          "scores": [
+            0.3523344397544861,
+            0.3481318950653076,
+            0.3439975678920746,
+            0.3426727056503296,
+            0.3339850902557373
+          ],
+          "accepted_ids": [],
+          "latency_ms": 7.25250001414679,
+          "reciprocal_rank": 1.0,
+          "recall": 0.6666666666666666
+        },
+        {
+          "id": "plot-1",
+          "category": "plot",
+          "query": "带着地球逃离即将毁灭的太阳",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            3,
+            2,
+            5,
+            4,
+            1
+          ],
+          "scores": [
+            0.7976922988891602,
+            0.6050248146057129,
+            0.5595084428787231,
+            0.5392146706581116,
+            0.5283159017562866
+          ],
+          "accepted_ids": [
+            3,
+            2,
+            5,
+            4,
+            1
+          ],
+          "latency_ms": 7.69689999287948,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-2",
+          "category": "plot",
+          "query": "回到北平寻找师门血案的凶手",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2,
+            5,
+            3,
+            4,
+            6
+          ],
+          "scores": [
+            0.7246209383010864,
+            0.6192160844802856,
+            0.5647625923156738,
+            0.5643423199653625,
+            0.5542275905609131
+          ],
+          "accepted_ids": [
+            2,
+            5,
+            3,
+            4,
+            6
+          ],
+          "latency_ms": 7.362800010014325,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-3",
+          "category": "plot",
+          "query": "土匪当上县长后和地方恶霸斗争",
+          "relevant_ids": [
+            1
+          ],
+          "ranked_ids": [
+            3,
+            1,
+            2,
+            6,
+            7
+          ],
+          "scores": [
+            0.5847384333610535,
+            0.582694947719574,
+            0.5690538287162781,
+            0.48650839924812317,
+            0.47293975949287415
+          ],
+          "accepted_ids": [
+            3,
+            1,
+            2,
+            6,
+            7
+          ],
+          "latency_ms": 8.732399990549311,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-4",
+          "category": "plot",
+          "query": "在非洲战乱中营救同胞",
+          "relevant_ids": [
+            4
+          ],
+          "ranked_ids": [
+            6,
+            4,
+            2,
+            7,
+            5
+          ],
+          "scores": [
+            0.5853676795959473,
+            0.5603140592575073,
+            0.5382928848266602,
+            0.4898099899291992,
+            0.48459362983703613
+          ],
+          "accepted_ids": [
+            6,
+            4,
+            2,
+            7,
+            5
+          ],
+          "latency_ms": 6.610100012039766,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-5",
+          "category": "plot",
+          "query": "京剧演员跨越半个世纪的悲欢离合",
+          "relevant_ids": [
+            5
+          ],
+          "ranked_ids": [
+            4,
+            3,
+            5,
+            2,
+            6
+          ],
+          "scores": [
+            0.6950536966323853,
+            0.6899597644805908,
+            0.6818724870681763,
+            0.6631815433502197,
+            0.5970902442932129
+          ],
+          "accepted_ids": [
+            4,
+            3,
+            5,
+            2,
+            6
+          ],
+          "latency_ms": 7.7778999984730035,
+          "reciprocal_rank": 0.3333333333333333,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-6",
+          "category": "plot",
+          "query": "一个叫旭仔的年轻人寻找生母",
+          "relevant_ids": [
+            6
+          ],
+          "ranked_ids": [
+            2,
+            4,
+            6,
+            5,
+            3
+          ],
+          "scores": [
+            0.5375856161117554,
+            0.5341641902923584,
+            0.5319581031799316,
+            0.5076272487640381,
+            0.463809072971344
+          ],
+          "accepted_ids": [
+            2,
+            4,
+            6,
+            5,
+            3
+          ],
+          "latency_ms": 6.73829999868758,
+          "reciprocal_rank": 0.3333333333333333,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-7",
+          "category": "plot",
+          "query": "叶问在乱世中的武林传奇",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7,
+            2,
+            1,
+            5,
+            6
+          ],
+          "scores": [
+            0.7616892457008362,
+            0.6059480309486389,
+            0.5829596519470215,
+            0.5586550235748291,
+            0.5242209434509277
+          ],
+          "accepted_ids": [
+            7,
+            2,
+            1,
+            5,
+            6
+          ],
+          "latency_ms": 7.068200007779524,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "compound-1",
+          "category": "compound",
+          "query": "姜文导演的动作片",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2,
+            6,
+            5,
+            1,
+            4
+          ],
+          "scores": [
+            0.6327657103538513,
+            0.6048721075057983,
+            0.5852530002593994,
+            0.5722818374633789,
+            0.5100514888763428
+          ],
+          "accepted_ids": [
+            2,
+            6,
+            5,
+            1,
+            4
+          ],
+          "latency_ms": 6.66579999960959,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "compound-2",
+          "category": "compound",
+          "query": "张国荣主演的剧情片",
+          "relevant_ids": [
+            5,
+            6
+          ],
+          "ranked_ids": [
+            5,
+            4,
+            2,
+            7,
+            6
+          ],
+          "scores": [
+            0.6693437695503235,
+            0.6426025629043579,
+            0.6379916667938232,
+            0.6340339183807373,
+            0.6153150200843811
+          ],
+          "accepted_ids": [
+            5,
+            4,
+            2,
+            7,
+            6
+          ],
+          "latency_ms": 7.450500008417293,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "negative-1",
+          "category": "out_of_catalog",
+          "query": "今天北京天气怎么样",
+          "relevant_ids": [],
+          "ranked_ids": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "scores": [
+            0.6870680451393127,
+            0.5986111760139465,
+            0.5824434161186218,
+            0.5457063317298889,
+            0.5175505876541138
+          ],
+          "accepted_ids": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_ms": 7.09700002335012,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-2",
+          "category": "out_of_catalog",
+          "query": "教我做番茄炒蛋",
+          "relevant_ids": [],
+          "ranked_ids": [
+            6,
+            3,
+            5,
+            2,
+            4
+          ],
+          "scores": [
+            0.5198842287063599,
+            0.41068553924560547,
+            0.39317408204078674,
+            0.39078840613365173,
+            0.3816416561603546
+          ],
+          "accepted_ids": [
+            6
+          ],
+          "latency_ms": 8.203999983379617,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-3",
+          "category": "out_of_catalog",
+          "query": "恐龙主题的电影",
+          "relevant_ids": [],
+          "ranked_ids": [
+            5,
+            2,
+            6,
+            4,
+            7
+          ],
+          "scores": [
+            0.6188098192214966,
+            0.589619517326355,
+            0.5817438960075378,
+            0.5712593197822571,
+            0.5223861336708069
+          ],
+          "accepted_ids": [
+            5,
+            2,
+            6,
+            4,
+            7
+          ],
+          "latency_ms": 7.161399989854544,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-4",
+          "category": "out_of_catalog",
+          "query": "魔法学校里的少年巫师",
+          "relevant_ids": [],
+          "ranked_ids": [
+            2,
+            1,
+            6,
+            4,
+            5
+          ],
+          "scores": [
+            0.5234024524688721,
+            0.4488731026649475,
+            0.44862961769104004,
+            0.42431843280792236,
+            0.41756969690322876
+          ],
+          "accepted_ids": [
+            2
+          ],
+          "latency_ms": 8.099700004095212,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-5",
+          "category": "out_of_catalog",
+          "query": "一部爱情喜剧片",
+          "relevant_ids": [],
+          "ranked_ids": [
+            6,
+            4,
+            2,
+            1,
+            3
+          ],
+          "scores": [
+            0.522335410118103,
+            0.5105355978012085,
+            0.48045337200164795,
+            0.4691396951675415,
+            0.4545975625514984
+          ],
+          "accepted_ids": [
+            6,
+            4,
+            2,
+            1,
+            3
+          ],
+          "latency_ms": 9.151199978077784,
+          "reciprocal_rank": null,
+          "recall": null
+        }
+      ]
+    },
+    {
+      "system": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "positive_queries": 25,
+      "negative_queries": 5,
+      "mrr@5": 0.848,
+      "recall@5": 0.9466666666666667,
+      "negative_false_accept_rate": 0.6,
+      "positive_empty_result_rate": 0.08,
+      "latency_ms_median": 14.668049989268184,
+      "cases": [
+        {
+          "id": "title-1",
+          "category": "title",
+          "query": "让子弹飞",
+          "relevant_ids": [
+            1
+          ],
+          "ranked_ids": [
+            1,
+            4,
+            2,
+            3,
+            7
+          ],
+          "scores": [
+            0.3020201325416565,
+            0.3893631100654602,
+            0.3682219386100769,
+            0.2815955877304077,
+            0.2815311551094055
+          ],
+          "accepted_ids": [
+            1
+          ],
+          "latency_ms": 16.836399998283014,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-2",
+          "category": "title",
+          "query": "邪不压正",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2,
+            4,
+            1,
+            7,
+            6
+          ],
+          "scores": [
+            0.36135798692703247,
+            0.4273570477962494,
+            0.33589038252830505,
+            0.28891173005104065,
+            0.28457969427108765
+          ],
+          "accepted_ids": [
+            2
+          ],
+          "latency_ms": 13.298700010636821,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-3",
+          "category": "title",
+          "query": "流浪地球",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            3,
+            6,
+            2,
+            4,
+            7
+          ],
+          "scores": [
+            0.6117771863937378,
+            0.46704575419425964,
+            0.4512045383453369,
+            0.4345700144767761,
+            0.3285946547985077
+          ],
+          "accepted_ids": [
+            3,
+            6,
+            2
+          ],
+          "latency_ms": 10.933699988527223,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-4",
+          "category": "title",
+          "query": "战狼2",
+          "relevant_ids": [
+            4
+          ],
+          "ranked_ids": [
+            4,
+            2,
+            1,
+            5,
+            6
+          ],
+          "scores": [
+            0.37064093351364136,
+            0.4253458082675934,
+            0.4097958207130432,
+            0.4072018563747406,
+            0.39222443103790283
+          ],
+          "accepted_ids": [
+            4
+          ],
+          "latency_ms": 14.5331000094302,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-5",
+          "category": "title",
+          "query": "霸王别姬",
+          "relevant_ids": [
+            5
+          ],
+          "ranked_ids": [
+            5,
+            1,
+            6,
+            2,
+            7
+          ],
+          "scores": [
+            0.48942291736602783,
+            0.6080371737480164,
+            0.5954891443252563,
+            0.562269926071167,
+            0.42809364199638367
+          ],
+          "accepted_ids": [
+            5,
+            1,
+            6,
+            2
+          ],
+          "latency_ms": 18.835199996829033,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-6",
+          "category": "title",
+          "query": "阿飞正传",
+          "relevant_ids": [
+            6
+          ],
+          "ranked_ids": [
+            6,
+            2,
+            1,
+            4,
+            7
+          ],
+          "scores": [
+            0.5228607654571533,
+            0.5512678623199463,
+            0.47395139932632446,
+            0.4397033154964447,
+            0.3653296232223511
+          ],
+          "accepted_ids": [
+            6,
+            2,
+            1
+          ],
+          "latency_ms": 19.488300022203475,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "title-7",
+          "category": "title",
+          "query": "一代宗师",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7,
+            2,
+            6,
+            5,
+            1
+          ],
+          "scores": [
+            0.37276381254196167,
+            0.30038517713546753,
+            0.2904791831970215,
+            0.28521114587783813,
+            0.274824321269989
+          ],
+          "accepted_ids": [
+            7
+          ],
+          "latency_ms": 18.42239999677986,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-1",
+          "category": "person",
+          "query": "姜文导演的电影",
+          "relevant_ids": [
+            1,
+            2
+          ],
+          "ranked_ids": [
+            2,
+            6,
+            5,
+            1,
+            7
+          ],
+          "scores": [
+            0.6226134300231934,
+            0.6119906306266785,
+            0.5937052965164185,
+            0.5699133276939392,
+            0.4124772548675537
+          ],
+          "accepted_ids": [
+            2,
+            6,
+            5,
+            1
+          ],
+          "latency_ms": 13.334699993720278,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-2",
+          "category": "person",
+          "query": "张国荣主演的电影",
+          "relevant_ids": [
+            5,
+            6
+          ],
+          "ranked_ids": [
+            1,
+            5,
+            2,
+            6,
+            7
+          ],
+          "scores": [
+            0.6815869808197021,
+            0.5893622636795044,
+            0.5839172601699829,
+            0.5721104741096497,
+            0.5159848928451538
+          ],
+          "accepted_ids": [
+            1,
+            5,
+            2,
+            6,
+            7
+          ],
+          "latency_ms": 14.668099989648908,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "person-3",
+          "category": "person",
+          "query": "王家卫导演的电影",
+          "relevant_ids": [
+            6,
+            7
+          ],
+          "ranked_ids": [
+            1,
+            6,
+            2,
+            5,
+            7
+          ],
+          "scores": [
+            0.5706594586372375,
+            0.566210150718689,
+            0.5549831390380859,
+            0.5176632404327393,
+            0.4089079201221466
+          ],
+          "accepted_ids": [
+            1,
+            6,
+            2,
+            5
+          ],
+          "latency_ms": 12.936099985381588,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "person-4",
+          "category": "person",
+          "query": "吴京主演的电影",
+          "relevant_ids": [
+            3,
+            4
+          ],
+          "ranked_ids": [
+            1,
+            6,
+            5,
+            2,
+            7
+          ],
+          "scores": [
+            0.6467167139053345,
+            0.528728723526001,
+            0.525546133518219,
+            0.5111979842185974,
+            0.4623219966888428
+          ],
+          "accepted_ids": [
+            1,
+            6,
+            5,
+            2,
+            7
+          ],
+          "latency_ms": 13.540899992221966,
+          "reciprocal_rank": 0.0,
+          "recall": 0.0
+        },
+        {
+          "id": "person-5",
+          "category": "person",
+          "query": "彭于晏主演的电影",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2,
+            1,
+            6,
+            5,
+            7
+          ],
+          "scores": [
+            0.6717913746833801,
+            0.6682347059249878,
+            0.5976772308349609,
+            0.5974328517913818,
+            0.5632756948471069
+          ],
+          "accepted_ids": [
+            2,
+            1,
+            6,
+            5,
+            7
+          ],
+          "latency_ms": 12.58340000640601,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "person-6",
+          "category": "person",
+          "query": "梁朝伟主演的电影",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            1,
+            2,
+            5,
+            6,
+            7
+          ],
+          "scores": [
+            0.675871729850769,
+            0.6027165651321411,
+            0.599463164806366,
+            0.5828691720962524,
+            0.5319141149520874
+          ],
+          "accepted_ids": [
+            1,
+            2,
+            5,
+            6,
+            7
+          ],
+          "latency_ms": 13.341299985768273,
+          "reciprocal_rank": 0.2,
+          "recall": 1.0
+        },
+        {
+          "id": "genre-1",
+          "category": "genre",
+          "query": "我想看科幻片",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            3,
+            6,
+            5,
+            2,
+            7
+          ],
+          "scores": [
+            0.39972418546676636,
+            0.2841768264770508,
+            0.22308140993118286,
+            0.1637590229511261,
+            0.14824235439300537
+          ],
+          "accepted_ids": [],
+          "latency_ms": 12.479099998017773,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "genre-2",
+          "category": "genre",
+          "query": "推荐动作电影",
+          "relevant_ids": [
+            2,
+            4,
+            7
+          ],
+          "ranked_ids": [
+            5,
+            2,
+            3,
+            6,
+            4
+          ],
+          "scores": [
+            0.4139019846916199,
+            0.33188679814338684,
+            0.3168778419494629,
+            0.3110249638557434,
+            0.310225248336792
+          ],
+          "accepted_ids": [],
+          "latency_ms": 13.11369999893941,
+          "reciprocal_rank": 0.5,
+          "recall": 0.6666666666666666
+        },
+        {
+          "id": "genre-3",
+          "category": "genre",
+          "query": "推荐剧情电影",
+          "relevant_ids": [
+            1,
+            5,
+            6
+          ],
+          "ranked_ids": [
+            5,
+            6,
+            2,
+            3,
+            1
+          ],
+          "scores": [
+            0.46374040842056274,
+            0.4341311454772949,
+            0.4084024131298065,
+            0.3693522810935974,
+            0.3442550003528595
+          ],
+          "accepted_ids": [
+            5
+          ],
+          "latency_ms": 12.692600023001432,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-1",
+          "category": "plot",
+          "query": "带着地球逃离即将毁灭的太阳",
+          "relevant_ids": [
+            3
+          ],
+          "ranked_ids": [
+            3,
+            4,
+            2,
+            7,
+            6
+          ],
+          "scores": [
+            0.8134841918945312,
+            0.32804208993911743,
+            0.29752153158187866,
+            0.1972775161266327,
+            0.18957890570163727
+          ],
+          "accepted_ids": [
+            3
+          ],
+          "latency_ms": 15.788799995789304,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-2",
+          "category": "plot",
+          "query": "回到北平寻找师门血案的凶手",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2,
+            6,
+            4,
+            1,
+            7
+          ],
+          "scores": [
+            0.7479333281517029,
+            0.5550371408462524,
+            0.4474934935569763,
+            0.40219151973724365,
+            0.3320823907852173
+          ],
+          "accepted_ids": [
+            2,
+            6
+          ],
+          "latency_ms": 14.601900009438396,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-3",
+          "category": "plot",
+          "query": "土匪当上县长后和地方恶霸斗争",
+          "relevant_ids": [
+            1
+          ],
+          "ranked_ids": [
+            1,
+            2,
+            4,
+            7,
+            5
+          ],
+          "scores": [
+            0.6884430646896362,
+            0.5465474128723145,
+            0.5327272415161133,
+            0.47554412484169006,
+            0.3938060998916626
+          ],
+          "accepted_ids": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "latency_ms": 15.403299999888986,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-4",
+          "category": "plot",
+          "query": "在非洲战乱中营救同胞",
+          "relevant_ids": [
+            4
+          ],
+          "ranked_ids": [
+            4,
+            2,
+            7,
+            1,
+            6
+          ],
+          "scores": [
+            0.7376130819320679,
+            0.4004022479057312,
+            0.3348562717437744,
+            0.31966546177864075,
+            0.2304365038871765
+          ],
+          "accepted_ids": [
+            4
+          ],
+          "latency_ms": 17.511699988972396,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-5",
+          "category": "plot",
+          "query": "京剧演员跨越半个世纪的悲欢离合",
+          "relevant_ids": [
+            5
+          ],
+          "ranked_ids": [
+            5,
+            1,
+            7,
+            4,
+            2
+          ],
+          "scores": [
+            0.7407095432281494,
+            0.46781158447265625,
+            0.43663275241851807,
+            0.4178813099861145,
+            0.3976823091506958
+          ],
+          "accepted_ids": [
+            5,
+            1
+          ],
+          "latency_ms": 15.386000013677403,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-6",
+          "category": "plot",
+          "query": "一个叫旭仔的年轻人寻找生母",
+          "relevant_ids": [
+            6
+          ],
+          "ranked_ids": [
+            6,
+            2,
+            1,
+            4,
+            3
+          ],
+          "scores": [
+            0.6175435781478882,
+            0.41284453868865967,
+            0.22792258858680725,
+            0.1375562697649002,
+            0.12904557585716248
+          ],
+          "accepted_ids": [
+            6
+          ],
+          "latency_ms": 15.124500001547858,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "plot-7",
+          "category": "plot",
+          "query": "叶问在乱世中的武林传奇",
+          "relevant_ids": [
+            7
+          ],
+          "ranked_ids": [
+            7,
+            2,
+            4,
+            1,
+            5
+          ],
+          "scores": [
+            0.6390745639801025,
+            0.5592648983001709,
+            0.5311652421951294,
+            0.49037498235702515,
+            0.44696560502052307
+          ],
+          "accepted_ids": [
+            7,
+            2,
+            4,
+            1
+          ],
+          "latency_ms": 21.1202000209596,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "compound-1",
+          "category": "compound",
+          "query": "姜文导演的动作片",
+          "relevant_ids": [
+            2
+          ],
+          "ranked_ids": [
+            2,
+            5,
+            6,
+            1,
+            4
+          ],
+          "scores": [
+            0.5908244252204895,
+            0.5746119022369385,
+            0.5738114714622498,
+            0.5148637294769287,
+            0.3869311809539795
+          ],
+          "accepted_ids": [
+            2,
+            5,
+            6,
+            1
+          ],
+          "latency_ms": 15.924900013487786,
+          "reciprocal_rank": 1.0,
+          "recall": 1.0
+        },
+        {
+          "id": "compound-2",
+          "category": "compound",
+          "query": "张国荣主演的剧情片",
+          "relevant_ids": [
+            5,
+            6
+          ],
+          "ranked_ids": [
+            1,
+            6,
+            5,
+            2,
+            7
+          ],
+          "scores": [
+            0.6940366625785828,
+            0.5779832005500793,
+            0.5582982897758484,
+            0.553464412689209,
+            0.49534839391708374
+          ],
+          "accepted_ids": [
+            1,
+            6,
+            5,
+            2,
+            7
+          ],
+          "latency_ms": 19.28290000068955,
+          "reciprocal_rank": 0.5,
+          "recall": 1.0
+        },
+        {
+          "id": "negative-1",
+          "category": "out_of_catalog",
+          "query": "今天北京天气怎么样",
+          "relevant_ids": [],
+          "ranked_ids": [
+            7,
+            1,
+            2,
+            3,
+            6
+          ],
+          "scores": [
+            0.3927392363548279,
+            0.2557361125946045,
+            0.21104934811592102,
+            0.15615399181842804,
+            0.11129151284694672
+          ],
+          "accepted_ids": [],
+          "latency_ms": 14.313399995444342,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-2",
+          "category": "out_of_catalog",
+          "query": "教我做番茄炒蛋",
+          "relevant_ids": [],
+          "ranked_ids": [
+            3,
+            6,
+            2,
+            1,
+            7
+          ],
+          "scores": [
+            0.17788085341453552,
+            0.1584913283586502,
+            0.11876203119754791,
+            0.08728820830583572,
+            0.03161481022834778
+          ],
+          "accepted_ids": [],
+          "latency_ms": 14.667999988887459,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-3",
+          "category": "out_of_catalog",
+          "query": "恐龙主题的电影",
+          "relevant_ids": [],
+          "ranked_ids": [
+            3,
+            5,
+            6,
+            2,
+            1
+          ],
+          "scores": [
+            0.46100112795829773,
+            0.37375569343566895,
+            0.34333279728889465,
+            0.29238468408584595,
+            0.2910444140434265
+          ],
+          "accepted_ids": [
+            3
+          ],
+          "latency_ms": 14.147500012768432,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-4",
+          "category": "out_of_catalog",
+          "query": "魔法学校里的少年巫师",
+          "relevant_ids": [],
+          "ranked_ids": [
+            6,
+            2,
+            1,
+            5,
+            7
+          ],
+          "scores": [
+            0.4792196750640869,
+            0.4314011335372925,
+            0.40555548667907715,
+            0.3559887409210205,
+            0.2747207283973694
+          ],
+          "accepted_ids": [
+            6
+          ],
+          "latency_ms": 15.891600021859631,
+          "reciprocal_rank": null,
+          "recall": null
+        },
+        {
+          "id": "negative-5",
+          "category": "out_of_catalog",
+          "query": "一部爱情喜剧片",
+          "relevant_ids": [],
+          "ranked_ids": [
+            6,
+            5,
+            2,
+            1,
+            3
+          ],
+          "scores": [
+            0.5242096185684204,
+            0.49733254313468933,
+            0.4385131597518921,
+            0.41866278648376465,
+            0.3265388309955597
+          ],
+          "accepted_ids": [
+            6,
+            5
+          ],
+          "latency_ms": 19.224799994844943,
+          "reciprocal_rank": null,
+          "recall": null
+        }
+      ]
+    }
+  ]
+}

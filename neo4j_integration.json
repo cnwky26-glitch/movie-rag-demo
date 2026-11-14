@@ -1,0 +1,22 @@
+{
+  "tls_validation": "native_system_truststore_with_certificate_verification",
+  "normal_import_entrypoint": "passed",
+  "repeated_import": "7_movie_nodes_no_duplicate_movie_ids",
+  "counts": {
+    "movies": 7,
+    "unique_ids": 7
+  },
+  "related_movie_ids_for_source_1": [
+    2,
+    5,
+    6
+  ],
+  "shared_person_count_source_1_target_2": 1,
+  "shared_person_source_roles": [
+    "DIRECTED",
+    "ACTED_IN"
+  ],
+  "shared_person_target_roles": [
+    "DIRECTED"
+  ]
+}
